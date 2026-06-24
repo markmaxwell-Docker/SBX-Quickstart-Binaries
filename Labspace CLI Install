@@ -1,45 +1,51 @@
 Labspace CLI Install
 
+Download the correct binary for your operating system.
 Rename the downloaded binary to docker-labspace and move it into ~/.docker/cli-plugins
-# Mac
+
+#### Mac ######################################################
 mkdir ~/.docker/cli-plugins/
 mv ~/Downloads/docker-labspace-darwin-arm64 ~/.docker/cli-plugins/docker-labspace
-# Windows 
-# PowerShell
-Move-Item "$HOME\Downloads\docker-labspace-windows-amd64.exe" "$HOME\.docker\cli-plugins\docker-labspace"
 
-Follow the Mac step
+Follow this Mac OS step
 
 For Mac users, you will need to make it executable and trust the binary:
 chmod +x ~/.docker/cli-plugins/docker-labspace
 xattr -d com.apple.quarantine ~/.docker/cli-plugins/docker-labspace
 
+#### Windows ######################################################
+PowerShell
+Move-Item "$HOME\Downloads\docker-labspace-windows-amd64.exe" "$HOME\.docker\cli-plugins\docker-labspace"
+(Create the directory in powershell if needed for the move)
+
+#### Validation ######################################################
 Validate the install:
 docker labspace version
+
+#### Start Workshop ######################################################
+docker labspace launch dockersamples/labspace-sbx-quickstart
 
 Workshop Binaries (Mac & Windows)
 https://github.com/markmaxwell-Docker/SBX-Quickstart-Binaries
 
-
 Workshop
 https://github.com/ajeetraina/labspace-sbx-quickstart
-
 
 Once SBX-Quick start is setup run in your Terminal:
 docker labspace launch dockersamples/labspace-sbx-quickstart
 
 
 
+
+#### OLD INSTRUCTIONS ###################################################### 
 The sbx-quickstart has been turned into a labspace! 
 https://docs.docker.com/ai/sandboxes/get-started/
-
 
 You will need to:
 Install the Labspace Docker CLI plugin and 
 Install SBX installed on your machine
 Google Drive where we provide access to CLI installers:
 https://drive.google.com/drive/folders/1IZ6_NwovSboCm2WUljGBGs1vhyKmwAyQ?usp=drive_link
-
 
 Note: You need to share it with anyone explicitly to be able to download it.
 In order to do the lab you need access to at least one API key for Anthropic, OpenAI or Gemini.  You also need a PAT for GitHub.
