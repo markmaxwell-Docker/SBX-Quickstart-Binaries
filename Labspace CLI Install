@@ -1,0 +1,50 @@
+Labspace CLI Install
+
+Rename the downloaded binary to docker-labspace and move it into ~/.docker/cli-plugins
+# Mac
+mkdir ~/.docker/cli-plugins/
+mv ~/Downloads/docker-labspace-darwin-arm64 ~/.docker/cli-plugins/docker-labspace
+# Windows 
+# PowerShell
+Move-Item "$HOME\Downloads\docker-labspace-windows-amd64.exe" "$HOME\.docker\cli-plugins\docker-labspace"
+
+Follow the Mac step
+
+For Mac users, you will need to make it executable and trust the binary:
+chmod +x ~/.docker/cli-plugins/docker-labspace
+xattr -d com.apple.quarantine ~/.docker/cli-plugins/docker-labspace
+
+Validate the install:
+docker labspace version
+
+Workshop Binaries (Mac & Windows)
+https://github.com/markmaxwell-Docker/SBX-Quickstart-Binaries
+
+
+Workshop
+https://github.com/ajeetraina/labspace-sbx-quickstart
+
+
+Once SBX-Quick start is setup run in your Terminal:
+docker labspace launch dockersamples/labspace-sbx-quickstart
+
+
+
+The sbx-quickstart has been turned into a labspace! 
+https://docs.docker.com/ai/sandboxes/get-started/
+
+
+You will need to:
+Install the Labspace Docker CLI plugin and 
+Install SBX installed on your machine
+Google Drive where we provide access to CLI installers:
+https://drive.google.com/drive/folders/1IZ6_NwovSboCm2WUljGBGs1vhyKmwAyQ?usp=drive_link
+
+
+Note: You need to share it with anyone explicitly to be able to download it.
+In order to do the lab you need access to at least one API key for Anthropic, OpenAI or Gemini.  You also need a PAT for GitHub.
+You need a docker login, so you can log in to SBX when starting sbx.
+
+
+Open your browser to http://localhost:3030 and run through the lab
+If you want to access the source, it's in the dockersamples/labspace-sbx-quickstart repo
